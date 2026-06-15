@@ -31,15 +31,15 @@ void HighwayPatrol::pullOver( Vehicle* v, bool willArrest, Highway* h )
     {
 //        assert(false);
         std::string vehicleType = " ";  
-        if( auto* car = dynamic_cast<Car*>(v) )
+        if( dynamic_cast<Car*>(v) != nullptr )
         {
             vehicleType = "car";
         }
-        else if( auto* bike = dynamic_cast<Motorcycle*>(v) )
+        else if( dynamic_cast<Motorcycle*>(v) != nullptr )
         {
             vehicleType = "motorcycle";
         }
-        else if( auto* truck = dynamic_cast<SemiTruck*>(v) )
+        else if( dynamic_cast<SemiTruck*>(v) != nullptr )
         {
             vehicleType = "semi truck";
         }
